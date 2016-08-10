@@ -1,0 +1,80 @@
+﻿
+<div class="panel panel-primary">
+    <div class="panel-heading text-center">
+        <h3>Page Rates - General</h3>
+    </div>
+  
+    <div class="panel-body container">
+            <p class="text-left red"><u>Please note, all dollar references are for Net US dollars.</u></p>       
+
+            <form class="form-inline">
+                <div class="row">
+                    <div class="form-group col-sm-6 text-right">
+                        <label class="red">2017 Guaranteed Rate Base (000):</label>
+                        <input type="text" class="form-control" id="rateBase" />
+                    </div>
+                    <div class="col-sm-6">
+                        <p>make sure calculations account for the fact that rate base is entered in thousands</p>
+                        <p>comment for rate base is incorrect - this should not be pulled from circulation field - pubs to enter in thousands</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-6 text-right">
+                        <label class="red">2017 NET P4C Open Rate:</label>
+                        <input type="text" class="form-control" id="netP4CRate" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm-6 text-right">
+                        <label class="red">2017 NET P4CB Open Rate:</label>
+                        <input type="text" class="form-control" id="netP4CBRate" />
+                    </div>
+                </div>  
+            </form>
+
+            <br />
+
+        <div class="row">
+            <div class="col-sm-8">
+                <p><b><u>Things to note regarding the L'Oreal USA Bleed Premium:</u></b></p>
+                <ul>
+                    <li>If your publication does charge for bleed from an open rates perspective, we expect you to waive bleed charges for L'Oreal USA.  If you agree, please enter 0% within the L'Oreal USA Bleed Premium section.</li>
+                    <li>If your publication will not agree to waive bleed charges but instead reduce them, please enter the adjusted bleed premium percentage in the L'Oreal USA Bleed Premium section.</li>
+                    <li>If your publication will not agree to waive or reduce bleed charges, then please ensure that the L'Oreal USA Bleed Premium that you enter matches the Open Bleed Premium.</li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <br />
+                <form>
+                    <div class="form-group">
+                        <label class="red">Open Bleed Premium:</label>
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="red">L'Oreal USA Bleed Premium:</label>
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="grid1" ui-grid="vm.DiscountStruc" class="grid"></div>
+                    </div>
+                </div>
+
+            
+
+        </div>
+
+
+
+    <div class="panel-footer">
+
+    </div>
+
+</div>

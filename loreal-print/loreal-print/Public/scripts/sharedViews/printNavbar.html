@@ -1,0 +1,28 @@
+﻿  <!-- Static navbar -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="books">Books</a></li>
+                <li><a ui-sref=".terms">Terms & Conditions</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rates<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a ui-sref=".rates">Rates</a></li>
+                        <li><a href="#">Scent Strips</a></li>
+                        <li><a href="#">Inserts</a></li>
+                        <li><a href="#">BRC Cards</a></li>
+                        <li><a href="#">Advertorial</a></li>
+                    </ul>
+                </li>
+                <li><a ui-sref=".circulation">Circulation</a></li>
+                <li><a ui-sref=".tablet">Tablet</a></li>
+                <li><a ui-sref=".endReport">End Report</a></li>
+                <li><a ui-sref=".signSubmit">Sign & Submit</a></li>
+
+            </ul>
+
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+<div ui-view></div>

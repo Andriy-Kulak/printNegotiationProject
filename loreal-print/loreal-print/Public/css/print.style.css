@@ -1,0 +1,27 @@
+﻿ .hidden{
+   visibility:hidden;
+   display: block!important;
+ }
+
+ .white-text {
+    color: white;
+}
+
+ select.ng-touched.ng-invalid {
+    border: 1px solid red;
+}
+select.ng-dirty.ng-valid {
+    border: 1px solid blue;
+}
+
+.orange {
+    color: orange
+}
+
+.green {
+    color: green
+}
+
+.red {
+    color: red
+}

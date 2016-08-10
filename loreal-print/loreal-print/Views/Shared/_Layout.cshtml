@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - MEC L'Oreal Print Application</title>
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lato:400,700' />
+    @*<link rel='stylesheet' type='text/css' href="~/node_modules/bootstrap/dist/css/bootstrap.css" />*@
+    <link rel='stylesheet' type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.2.6/ui-grid.min.css" />
+    <link rel='stylesheet' type='text/css' href="~/public/css/print.style.css" />
+    @Styles.Render("~/Content/css")
+    @*Scripts.Render("~/bundles/modernizr")
+        @*Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink(Server.HtmlDecode("MEC L'Oréal Print"), "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+        @*<script type="text/javascript" src="~/node_modules/jquery/dist/jquery.js"></script>
+            <script type="text/javascript" src="~/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+            <script type="text/javascript" src="~/node_modules/angular/angular.js"></script>
+            <script type="text/javascript" src="~/node_modules/angular-ui-router/release/angular-ui-router.js"></script>*@
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/3.2.6/ui-grid.min.js"></script>
+        <script type="text/javascript" src="~/public/scripts/print.module.js"></script>
+        <script type="text/javascript" src="~/public/scripts/books/books.controller.js"></script>
+        <script type="text/javascript" src="~/public/scripts/terms/terms.controller.js"></script>
+        <script type="text/javascript" src="~/public/scripts/rates/rates.controller.js"></script>
+
+        @*<script type="text/javascript" src="~/public/scripts/services/booksvalue.service.js"></script>*@
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <label class="col-xs-5 pull-left">&copy; @DateTime.Now.Year - @Server.HtmlDecode("MEC L'Oréal Print Application")</label>
+            <label class="col-xs-2 pull-right">Version @ViewContext.Controller.GetType().Assembly.GetName().Version</label>
+            @*Machine: @System.Environment.MachineName.Substring(System.Environment.MachineName.Length - 3)*@
+        </footer>
+    </div>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>
