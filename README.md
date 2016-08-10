@@ -1,4 +1,4 @@
-<3> printNegotiationProject </h3>
+<h3> printNegotiationProject </h3>
 <p>Project built with C#, Asp.Net 4.5, and Angular 1</p>
 
 <p> The main purpose of the project is to have a web app through which companies are able to negotiate ad deals on print magazines.
